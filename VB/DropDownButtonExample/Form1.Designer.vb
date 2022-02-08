@@ -1,5 +1,7 @@
-﻿Namespace DropDownButtonExample
-    Partial Public Class Form1
+Namespace DropDownButtonExample
+
+    Partial Class Form1
+
         ''' <summary>
         ''' Required designer variable.
         ''' </summary>
@@ -10,21 +12,21 @@
         ''' </summary>
         ''' <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
-            If disposing AndAlso (components IsNot Nothing) Then
-                components.Dispose()
+            If disposing AndAlso (Me.components IsNot Nothing) Then
+                Me.components.Dispose()
             End If
+
             MyBase.Dispose(disposing)
         End Sub
 
-        #Region "Windows Form Designer generated code"
-
+#Region "Windows Form Designer generated code"
         ''' <summary>
         ''' Required method for Designer support - do not modify
         ''' the contents of this method with the code editor.
         ''' </summary>
         Private Sub InitializeComponent()
             Me.components = New System.ComponentModel.Container()
-            Dim resources As New System.ComponentModel.ComponentResourceManager(GetType(Form1))
+            Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(DropDownButtonExample.Form1))
             Me.dropDownButton1 = New DevExpress.XtraEditors.DropDownButton()
             Me.popupMenu1 = New DevExpress.XtraBars.PopupMenu(Me.components)
             Me.barButtonItem1 = New DevExpress.XtraBars.BarButtonItem()
@@ -35,16 +37,16 @@
             Me.barDockControlLeft = New DevExpress.XtraBars.BarDockControl()
             Me.barDockControlRight = New DevExpress.XtraBars.BarDockControl()
             Me.imageCollection1 = New DevExpress.Utils.ImageCollection(Me.components)
-            CType(Me.popupMenu1, System.ComponentModel.ISupportInitialize).BeginInit()
-            CType(Me.barManager1, System.ComponentModel.ISupportInitialize).BeginInit()
-            CType(Me.imageCollection1, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.popupMenu1), System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.barManager1), System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me.imageCollection1), System.ComponentModel.ISupportInitialize).BeginInit()
             Me.SuspendLayout()
             ' 
             ' dropDownButton1
             ' 
             Me.dropDownButton1.Dock = System.Windows.Forms.DockStyle.Top
             Me.dropDownButton1.DropDownControl = Me.popupMenu1
-            Me.dropDownButton1.Image = My.Resources.About
+            Me.dropDownButton1.Image = Global.DropDownButtonExample.Properties.Resources.About
             Me.dropDownButton1.Location = New System.Drawing.Point(0, 0)
             Me.dropDownButton1.Name = "dropDownButton1"
             Me.dropDownButton1.Size = New System.Drawing.Size(284, 44)
@@ -53,10 +55,7 @@
             ' 
             ' popupMenu1
             ' 
-            Me.popupMenu1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() { _
-                New DevExpress.XtraBars.LinkPersistInfo(Me.barButtonItem1), _
-                New DevExpress.XtraBars.LinkPersistInfo(Me.barButtonItem2) _
-            })
+            Me.popupMenu1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.barButtonItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.barButtonItem2)})
             Me.popupMenu1.Manager = Me.barManager1
             Me.popupMenu1.Name = "popupMenu1"
             ' 
@@ -82,7 +81,7 @@
             Me.barManager1.DockControls.Add(Me.barDockControlRight)
             Me.barManager1.Form = Me
             Me.barManager1.Images = Me.imageCollection1
-            Me.barManager1.Items.AddRange(New DevExpress.XtraBars.BarItem() { Me.barButtonItem1, Me.barButtonItem2})
+            Me.barManager1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.barButtonItem1, Me.barButtonItem2})
             Me.barManager1.MaxItemId = 2
             ' 
             ' barDockControlTop
@@ -115,7 +114,7 @@
             ' 
             ' imageCollection1
             ' 
-            Me.imageCollection1.ImageStream = (CType(resources.GetObject("imageCollection1.ImageStream"), DevExpress.Utils.ImageCollectionStreamer))
+            Me.imageCollection1.ImageStream = CType((resources.GetObject("imageCollection1.ImageStream")), DevExpress.Utils.ImageCollectionStreamer)
             Me.imageCollection1.TransparentColor = System.Drawing.Color.Fuchsia
             ' 
             ' Form1
@@ -130,26 +129,32 @@
             Me.Controls.Add(Me.barDockControlTop)
             Me.Name = "Form1"
             Me.Text = "Form1"
-            CType(Me.popupMenu1, System.ComponentModel.ISupportInitialize).EndInit()
-            CType(Me.barManager1, System.ComponentModel.ISupportInitialize).EndInit()
-            CType(Me.imageCollection1, System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.popupMenu1), System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.barManager1), System.ComponentModel.ISupportInitialize).EndInit()
+            CType((Me.imageCollection1), System.ComponentModel.ISupportInitialize).EndInit()
             Me.ResumeLayout(False)
             Me.PerformLayout()
-
         End Sub
 
-        #End Region
-
+#End Region
         Private dropDownButton1 As DevExpress.XtraEditors.DropDownButton
+
         Private barManager1 As DevExpress.XtraBars.BarManager
+
         Private barDockControlTop As DevExpress.XtraBars.BarDockControl
+
         Private barDockControlBottom As DevExpress.XtraBars.BarDockControl
+
         Private barDockControlLeft As DevExpress.XtraBars.BarDockControl
+
         Private barDockControlRight As DevExpress.XtraBars.BarDockControl
+
         Private popupMenu1 As DevExpress.XtraBars.PopupMenu
+
         Private imageCollection1 As DevExpress.Utils.ImageCollection
+
         Private barButtonItem1 As DevExpress.XtraBars.BarButtonItem
+
         Private barButtonItem2 As DevExpress.XtraBars.BarButtonItem
     End Class
 End Namespace
-
