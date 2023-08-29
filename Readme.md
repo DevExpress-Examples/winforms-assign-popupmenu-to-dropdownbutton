@@ -4,19 +4,31 @@
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
 
-# PopupMenu for Windows Forms - How to show a PopupMenu as a DropDownButton control's dropdown
+# WinForms Popup Menu - How to use a popup menu as the dropdown of DropDownButton
 
-The [DropDownButton](https://docs.devexpress.com/WindowsForms/DevExpress.XtraEditors.DropDownButton) control is a button with an associated popup control. 
-This example uses the [DropDownButton.DropDownControl](https://docs.devexpress.com/WindowsForms/DevExpress.XtraEditors.DropDownButton.DropDownControl) property to assign a [PopupMenu](https://docs.devexpress.com/WindowsForms/DevExpress.XtraBars.PopupMenu) to a [DropDownButton](https://docs.devexpress.com/WindowsForms/DevExpress.XtraEditors.DropDownButton) control at design time and runtime.
+The [WinForms DropDownButton](https://docs.devexpress.com/WindowsForms/DevExpress.XtraEditors.DropDownButton) control is a push button with an associated popup control. This example demonstrates how to display a popup menu when the dropdown button is clicked. The example demonstrates how to customize the `DropDownButton` at design-time and runtime.
 
+Use the [DropDownButton.DropDownControl](https://docs.devexpress.com/WindowsForms/DevExpress.XtraEditors.DropDownButton.DropDownControl) property to assign a [PopupMenu](https://docs.devexpress.com/WindowsForms/DevExpress.XtraBars.PopupMenu) to a [DropDownButton](https://docs.devexpress.com/WindowsForms/DevExpress.XtraEditors.DropDownButton) control.
 
-<!-- default file list -->
-## Files to Look At
+```csharp
+private void InitDropDownButton() {
+    // Creates the DropDownButton.
+    DropDownButton dropDownButton = CreateDropDownButton("Button created at runtime", "MyButton", DropDownButtonExample.Properties.Resources.About, this.dropDownButton1.Size);
+    dropDownButton.BringToFront();
+    // Creates poup menu items.
+    DevExpress.XtraBars.BarButtonItem item1 = CreateBarButtonItem("Item 1", "item1", 0);
+    DevExpress.XtraBars.BarButtonItem item2 = CreateBarButtonItem("Item 2", "item2", 1);
+    // Creates the popup menu and assigns it to the DropDownButton.
+    dropDownButton.DropDownControl = CreatePopupMenu(new BarItem[] { item1, item2 }, this.barManager1, "MyPopupMenu");
+}
+```
+
+## Files to Review
 
 * [Form1.cs](./CS/DropDownButtonExample/Form1.cs) (VB: [Form1.vb](./VB/DropDownButtonExample/Form1.vb))
 
-<!-- default file list end -->
 
 ## Documentation
-- [DropDownButton](https://docs.devexpress.com/WindowsForms/DevExpress.XtraEditors.DropDownButton)
-- [PopupMenu](https://docs.devexpress.com/WindowsForms/DevExpress.XtraBars.PopupMenu)
+
+* [DropDownButton](https://docs.devexpress.com/WindowsForms/DevExpress.XtraEditors.DropDownButton)
+* [PopupMenu](https://docs.devexpress.com/WindowsForms/DevExpress.XtraBars.PopupMenu)
