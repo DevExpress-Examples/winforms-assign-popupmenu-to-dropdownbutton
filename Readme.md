@@ -6,7 +6,7 @@
 
 # WinForms Popup Menu - How to use a popup menu as the dropdown of DropDownButton
 
-The [WinForms DropDownButton](https://docs.devexpress.com/WindowsForms/DevExpress.XtraEditors.DropDownButton) control is a push button with an associated popup control. This example demonstrates how to display a popup menu when the dropdown button is clicked. The example demonstrates how to customize the `DropDownButton` at design-time and runtime.
+The [WinForms DropDownButton](https://docs.devexpress.com/WindowsForms/DevExpress.XtraEditors.DropDownButton) control is a push button with an associated popup control. This example demonstrates how to display a popup menu when the drop-down button is clicked. The example demonstrates how to customize the `DropDownButton` at design-time and runtime.
 
 Use the [DropDownButton.DropDownControl](https://docs.devexpress.com/WindowsForms/DevExpress.XtraEditors.DropDownButton.DropDownControl) property to assign a [PopupMenu](https://docs.devexpress.com/WindowsForms/DevExpress.XtraBars.PopupMenu) to a [DropDownButton](https://docs.devexpress.com/WindowsForms/DevExpress.XtraEditors.DropDownButton) control.
 
